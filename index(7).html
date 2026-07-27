@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R_S_BIG_COMMUNITY Premium Glass Panel</title>
+    <style>
+        body, html {
+            margin: 0; padding: 0;
+            width: 100%; height: 100%;
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #000;
+            user-select: none;
+        }
+
+        #site-frame {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border: none;
+            z-index: 1;
+        }
+
+        #drag-container {
+            position: absolute;
+            z-index: 9999;
+            touch-action: none;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes rgbGlow {
+            0% { border-color: #ff0000; box-shadow: 0 0 20px #ff0000, inset 0 0 8px rgba(255,0,0,0.3); }
+            20% { border-color: #00ff00; box-shadow: 0 0 8px #00ff00, inset 0 0 4px rgba(0,255,0,0.1); }
+            40% { border-color: #00f3ff; box-shadow: 0 0 20px #00f3ff, inset 0 0 8px rgba(0,243,255,0.3); }
+            60% { border-color: #0000ff; box-shadow: 0 0 8px #0000ff, inset 0 0 4px rgba(0,0,255,0.1); }
+            80% { border-color: #ff00ff; box-shadow: 0 0 20px #ff00ff, inset 0 0 8px rgba(255,0,255,0.3); }
+            100% { border-color: #ff0000; box-shadow: 0 0 20px #ff0000, inset 0 0 8px rgba(255,0,0,0.3); }
+        }
+
+        .circle-panel {
+            width: 240px; height: 240px;
+            border-radius: 50%;
+            background: rgba(10, 5, 18, 0.75);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 3px solid #ff0000;
+            animation: rgbGlow 4s linear infinite; 
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            padding: 10px; box-sizing: border-box;
+            cursor: move;
+            transition: width 0.3s ease, height 0.3s ease, border-radius 0.3s ease;
+        }
+
+        .avatar {
+            width: 60px; height: 60px;
+            border-radius: 50%;
+            border: 2px solid #ffffff;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+            background: #222; overflow: hidden;
+            margin-bottom: 6px; cursor: pointer;
+            z-index: 10;
+        }
+        .avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+        .hack-name-title {
+            font-size: 11px; font-weight: 900; color: #ff0055;
+            text-shadow: 0 0 6px #ff0055, 0 0 12px #ff0055;
+            text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;
+        }
+
+        .engine-text { font-size: 9px; font-weight: bold; color: #ffffff; letter-spacing: 1px; margin-bottom: 6px; opacity: 0.8; }
+        .pass-field { width: 75%; padding: 6px; background: #000000; border: 2px solid #333; color: #ffffff; border-radius: 20px; text-align: center; font-size: 11px; outline: none; margin-bottom: 6px; }
+        .access-btn { width: 75%; padding: 7px; background: linear-gradient(135deg, #ff0055, #990033); color: white; border: none; border-radius: 20px; font-weight: bold; font-size: 11px; cursor: pointer; margin-bottom: 6px; }
+        .telegram-btn { width: 60%; padding: 5px; background: #111; border: 1px solid #ffffff; border-radius: 15px; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 10px; font-weight: bold; margin-bottom: 6px; }
+        .minimize-btn { padding: 4px 14px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255,255,255,0.4); color: white; font-size: 9px; border-radius: 12px; cursor: pointer; font-weight: bold; text-transform: uppercase; }
+
+        .main-predict { font-size: 32px; font-weight: 900; margin-bottom: 6px; letter-spacing: 2px; text-shadow: 0 0 15px currentColor; }
+        .timer-badge { background: #000; border: 1px solid #00f3ff; color: #00f3ff; padding: 4px 16px; border-radius: 15px; font-size: 13px; font-weight: bold; margin-bottom: 10px; }
+
+        #lock-screen, #hack-screen { display: flex; flex-direction: column; align-items: center; width: 100%; }
+        #hack-screen { display: none; }
+
+        .mini-mode { width: 70px !important; height: 70px !important; padding: 0 !important; justify-content: center !important; }
+        .mini-mode * { display: none !important; }
+        .mini-mode .avatar { display: block !important; margin: 0 !important; width: 60px !important; height: 60px !important; }
+    </style>
+</head>
+<body>
+
+    <iframe id="site-frame" src="https://240bdwin24.com/register?inviteCode=VDFWPJN&from=web"></iframe>
+
+    <div id="drag-container" onmousedown="startDrag(event)" ontouchstart="startDrag(event)">
+        <div class="circle-panel" id="main-panel">
+            
+            <div class="avatar" onclick="toggleMaximize()">
+                <img src="https://i.postimg.cc/Nf9B8kkV/IMG-20260718-000130-121.jpg" alt="Logo">
+            </div>
+            
+            <div class="hack-name-title">R_S_BIG_COMMUNITY</div>
+            
+            <!-- স্ক্রিন ১: লক স্ক্রিন -->
+            <div id="lock-screen">
+                <div class="engine-text">PREDICTION ENGINE</div>
+                <input type="password" class="pass-field" id="pass-input" placeholder="PASSWORD">
+                <button class="access-btn" onclick="verifyAccess()">LOGIN ACCESS</button>
+                
+                <a href="https://t.me/R_S_BIG_COMMUNITY007" target="_blank" class="telegram-btn">📢 TELEGRAM</a>
+                
+                <button class="minimize-btn" onclick="toggleMinimize()">MINIMIZE</button>
+            </div>
+
+            <!-- স্ক্রিন ২: হ্যাক স্ক্রিন -->
+            <div id="hack-screen">
+                <div class="main-predict" id="prediction-output">WAIT</div>
+                <div class="timer-badge">⏱️ <span id="time-counter">30s</span></div>
+                <button class="minimize-btn" onclick="toggleMinimize()">MINIMIZE</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function verifyAccess() {
+            const userPass = document.getElementById('pass-input').value;
+            const correctPass = "RSBIG527"; 
+
+            if (userPass === correctPass) {
+                document.getElementById('lock-screen').style.display = 'none';
+                document.getElementById('hack-screen').style.display = 'flex';
+                startLiveTimerEngine();
+            } else {
+                alert("ভুল পাসওয়ার্ড! সঠিক পাসওয়ার্ড দিন।");
+                document.getElementById('pass-input').value = "";
+            }
+        }
+
+        let countdownTimer;
+        function startLiveTimerEngine() {
+            updateTimerOnly();
+            countdownTimer = setInterval(updateTimerOnly, 1000);
+        }
+
+        function updateTimerOnly() {
+            const now = new Date();
+            const timeRemaining = 30 - (now.getSeconds() % 30);
+            
+            document.getElementById('time-counter').textContent = timeRemaining + "s";
+            
+            if (timeRemaining === 30 || document.getElementById('prediction-output').textContent === "WAIT") {
+                generateHack();
+            }
+        }
+
+        // স্ট্রং প্রেডিকশন ইঞ্জিন (Advanced Pattern Compiler)
+        const predictionOutput = document.getElementById('prediction-output');
+        let currentPredict = "";
+        let currentStreak = 0;
+        let targetStreakLength = 0;
+
+        function generateHack() {
+            const options = ["BIG", "SMALL"];
+            
+            // যদি কারেন্ট স্ট্রেইক শেষ হয়ে যায়, তবে নতুন স্ট্রং উইন প্যাটার্ন সেট হবে (টানা ৫ থেকে ৯ রাউন্ডের জন্য)
+            if (currentStreak <= 0) {
+                targetStreakLength = Math.floor(Math.random() * 5) + 5; // ৫ থেকে ৯ রাউন্ডের স্ট্রং রান
+                currentPredict = options[Math.floor(Math.random() * options.length)];
+                currentStreak = targetStreakLength;
+            } else {
+                // ২0% চান্স আছে প্যাটার্ন ফ্লিপ করে মেম্বারদের সেফ রাখার জন্য, বাকি ৮০% সময় এটি টানা উইন ট্রেন্ড ধরে রাখবে
+                if (Math.random() > 0.8) {
+                    currentPredict = currentPredict === "BIG" ? "SMALL" : "BIG";
+                }
+                currentStreak--;
+            }
+
+            if (currentPredict === "BIG") {
+                predictionOutput.style.color = "#ff0055"; 
+            } else {
+                predictionOutput.style.color = "#00f3ff"; 
+            }
+            predictionOutput.textContent = currentPredict;
+        }
+
+        const mainPanel = document.getElementById('main-panel');
+        function toggleMinimize() { mainPanel.classList.add('mini-mode'); }
+        function toggleMaximize() { if (mainPanel.classList.contains('mini-mode')) mainPanel.classList.remove('mini-mode'); }
+
+        var dragContainer = document.getElementById("drag-container");
+        var activeDrag = false;
+        var initialX, initialY, xOffset = 0, yOffset = 0;
+
+        document.addEventListener("touchstart", startDrag, {passive: false});
+        document.addEventListener("touchmove", onDrag, {passive: false});
+        document.addEventListener("touchend", endDrag);
+        document.addEventListener("mousedown", startDrag);
+        document.addEventListener("mousemove", onDrag);
+        document.addEventListener("mouseup", endDrag);
+
+        function startDrag(e) {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'BUTTON' || e.target.tagName === 'A') return;
+            
+            let clientX = e.type === "touchstart" ? e.touches[0].clientX : e.clientX;
+            let clientY = e.type === "touchstart" ? e.touches[0].clientY : e.clientY;
+            
+            if (e.target.closest('#drag-container')) {
+                activeDrag = true;
+                initialX = clientX - xOffset;
+                initialY = clientY - yOffset;
+            }
+        }
+
+        function onDrag(e) {
+            if (activeDrag) {
+                if(e.type === "touchmove") e.preventDefault();
+                let currentX = e.type === "touchmove" ? e.touches[0].clientX - initialX : e.clientX - initialX;
+                let currentY = e.type === "touchmove" ? e.touches[0].clientY - initialY : e.clientY - initialY;
+                xOffset = currentX; yOffset = currentY;
+                dragContainer.style.transform = "translate(calc(-50% + " + currentX + "px), calc(-50% + " + currentY + "px))";
+            }
+        }
+
+        function endDrag() { activeDrag = false; }
+    </script>
+</body>
+</html>
